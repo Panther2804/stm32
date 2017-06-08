@@ -1,0 +1,10 @@
+*.o
+*.d
+*.bin
+*.elf
+*.hex
+*/Release/*
+*/Debug/*
+*/Utilities/*
+*/HAL_Driver/*
+*/CMSIS/*

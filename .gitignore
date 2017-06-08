@@ -3,8 +3,8 @@
 *.bin
 *.elf
 *.hex
-*/Release/*
-*/Debug/*
-*/Utilities/*
-*/HAL_Driver/*
-*/CMSIS/*
+Release/
+Debug/
+Utilities/
+HAL_Driver/
+CMSIS/

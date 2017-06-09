@@ -2,11 +2,17 @@
 
 https://www.open-electronics.org/lets-code-with-stm32-nucleo/
 https://www.mikrocontroller.net/articles/STM32
+https://www.mikrocontroller.net/articles/STM32_f%C3%BCr_Einsteiger
+http://www.mystm32.de/doku.php
+
+## C Lang
+
+https://www.tutorialspoint.com/cprogramming/
+http://de.cppreference.com/w/
 
 ## Hardware Overview
 
 ### STM32 Overview
-
 
 ### Debugger Hardware
 
@@ -38,6 +44,9 @@ http://www.emcu.eu/2017/03/13/how-to-use-stm32-and-arduino-ide/
 #### Debugger and Flashing Software
 
 http://openocd.org/
+https://github.com/erwango/openocd-stm32.git
+
+https://github.com/texane/stlink.git
 
 #### Other Software
 
@@ -45,7 +54,6 @@ http://ymorin.is-a-geek.org/projects/kconfig-frontends
 http://ymorin.is-a-geek.org/git/kconfig-frontends/
 
 https://stackoverflow.com/questions/26961795/converting-from-hex-to-bin-for-arm-on-linux
-
 
 ## MCU STM32 Software Overview
 
@@ -91,6 +99,16 @@ https://github.com/cesanta/mjs
 https://mongoose-os.com/software.html
 https://mongoose-os.com/docs/quickstart/setup.html
 
+##### Async
+
+MJS (aka V7) has no async support
+https://github.com/cesanta/v7/issues/552
+http://tc39.github.io/ecmascript-asyncawait/
+https://github.com/bluejava/zousan
+
+But mongoose-os can use multiple threads
+https://github.com/cesanta/mongoose/blob/dev/examples/multithreaded/multithreaded.c
+
 ###### Supported Plattforms
 
 * esp8266
@@ -103,6 +121,23 @@ https://mongoose-os.com/docs/quickstart/setup.html
 http://www.nuttx.org
 https://bitbucket.org/nuttx/nuttx
 https://bitbucket.org/nuttx/apps
+
+##### Build NuttX for STM32
+
+clone nuttx and apps
+
+cd tools/
+ ./configure.sh stm32l476vg-disco/nsh
+
+export PATH=/opt/stm32/ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.13.1.201705091103/tools/compiler/bin:$PATH
+
+make CROSSDEV=arm-none-eabi-
+
+Result:
+* nuttx
+* nuttx.bin
+* nuttx.hex
+* nuttx.map
 
 #### Zephyr
 
@@ -160,6 +195,36 @@ https://github.com/Samsung/iotjs/blob/master/docs/help/Getting-Started.md
 
 https://micropython.org/
 https://github.com/micropython/micropython
+http://docs.micropython.org/en/latest/wipy/reference/constrained.html
+http://docs.micropython.org/en/latest/wipy/reference/speed_python.html
+
+##### Pycom.io
+
+https://docs.pycom.io/pycom_esp32/pycom_esp32/getstarted.html
+https://docs.pycom.io/pycom_esp32/pycom_esp32/toolsandfeatures.html
+
+https://www.pycom.io/development-boards
+https://en.m.wikipedia.org/wiki/ESP32
+
+https://www.pycom.io/software/
+https://www.pycom.io/pybytes/
+
+#### Async
+
+Thread support
+https://docs.pycom.io/pycom_esp32/pycom_esp32/tutorial/includes/threading.html
+https://forum.micropython.org/viewtopic.php?t=1864
+
+Garbage Collector is multithread-enabled
+https://www.pycom.io/qa-micropython-multi-threading-garbage-collector/
+
+Writing of ISR is possible
+http://docs.micropython.org/en/latest/wipy/reference/isr_rules.html
+https://github.com/micropython/micropython/issues/1275
+
+Extension for async/await is available
+https://github.com/peterhinch/micropython-async
+https://forum.micropython.org/viewtopic.php?t=2876
 
 ##### Supported Plattforms
 
@@ -186,7 +251,31 @@ https://github.com/micropython/micropython/wiki/Boards-Summary
 * some STM32 https://github.com/micropython/micropython/tree/master/stmhal
 * many others
 
-#### Lua
+#### Lua/eLua
+
+http://www.eluaproject.net/overview/why-lua
+http://www.eluaproject.net/doc/v0.9/en_arch_ltr.html
+
+##### Supported Plattforms
+
+http://wiki.eluaproject.net/Boards
+
+* many, and also many ARM Cortex M3, M4
+* STM32F4DISCOVERY
+* Mini STM32 STM32F103 TFT LCD Board V3 (with TFT touch screen for ~US$50) 
+
+##### Async
+
+Event Loop based (Cooperative MT)
+http://elua-development.2368040.n2.nabble.com/eLua-vs-Lua-on-RTOS-td5959889.html
+
+Interpreter is not reentrantable
+https://stackoverflow.com/questions/8816386/is-it-okay-calling-lua-function-from-different-threadembedding-lua-in-c
+
+Extension for coroutines is available (but hardly used)
+http://elua-development.2368040.n2.nabble.com/Pure-Lua-multitasking-with-eLua-td7578258.html
+https://github.com/xopxe/eLumen
+https://github.com/xopxe/Lumen
 
 #### Other
 
@@ -213,6 +302,7 @@ https://learn.adafruit.com/dash-hacking-bare-metal-stm32-programming/programming
 
 #### Old BUT RECOMMENDED
 
+http://diller-technologies.de/stm32.html (FEATURED!)
 https://www.mikrocontroller.net/articles/STM32F10x_Standard_Peripherals_Library
 
 #### Interrupts
@@ -266,6 +356,8 @@ http://gort.io/
 
 ### STM32 Projects
 
+http://www.runeaudio.com/about/ (CPU)
+
 #### Autopilot
 
 http://px4.io/
@@ -275,9 +367,13 @@ https://github.com/PX4
 
 http://mikrocontroller.bplaced.net/wordpress/?page_id=3195
 
+#### Drehgeber/Quadraturencoder
+
+https://www.mikrocontroller.net/articles/Drehgeber
+
 ### IoT
 
 #### Iot RF
 
 http://www.st.com/content/st_com/en/products/wireless-connectivity/sub-1ghz-rf.html
-
+https://de.m.wikipedia.org/wiki/Sigfox

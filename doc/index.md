@@ -297,6 +297,45 @@ https://github.com/micropython/micropython/wiki/Boards-Summary
 http://www.eluaproject.net/overview/why-lua
 http://www.eluaproject.net/doc/v0.9/en_arch_ltr.html
 
+##### Building elua/stm32
+
+http://www.eluaproject.net/doc/master/en_building.html
+http://www.eluaproject.net/doc/master/en_configurator.html
+http://wiki.eluaproject.net/STM32F103
+http://wiki.eluaproject.net/STM32F4DISCOVERY
+
+Install lua and luarocks
+
+sudo luarocks install luafilesystem
+sudo luarocks install md5
+
+cp boards/known/stm32f4discovery.lua boards/custom/
+
+kate boards/custom/stm32f4discovery.lua
+
+lua build_elua.lua board=stm32f4discovery
+
+BUILD FAILS, because of 
+
+lua: ./utils/mkfs.lua:4: module 'pack' not found:
+        no field package.preload['pack']
+        no file '/usr/share/lua/5.3/pack.lua'
+        no file '/usr/share/lua/5.3/pack/init.lua'
+        no file '/usr/lib64/lua/5.3/pack.lua'
+        no file '/usr/lib64/lua/5.3/pack/init.lua'
+        no file './pack.lua'
+        no file './pack/init.lua'
+        no file '/usr/lib64/lua/5.3/pack.so'
+        no file '/usr/lib64/lua/5.3/loadall.so'
+        no file './pack.so'
+        
+It seems to need lua-5.1!
+http://lua-users.org/lists/lua-l/2015-03/msg00170.html
+
+SOLUTION
+
+* Edit utils/mkfs.lua and comment out 'require("pack")' with '--'
+
 ##### Supported Plattforms
 
 http://wiki.eluaproject.net/Boards

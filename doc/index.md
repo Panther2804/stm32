@@ -149,6 +149,20 @@ https://www.zephyrproject.org/doc/boards/boards.html
 * STM32 (of course) <br/>
   https://www.zephyrproject.org/doc/boards/arm/nucleo_l476rg/doc/nucleol476rg.html
   
+##### Build Zephyr for STM32
+
+https://www.zephyrproject.org/doc/getting_started/getting_started.html
+https://www.zephyrproject.org/doc/boards/boards.html
+https://www.zephyrproject.org/doc/boards/arm/nucleo_l476rg/doc/nucleol476rg.html
+
+export GCCARMEMB_TOOLCHAIN_PATH="/opt/stm32/ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.13.1.201705091103/tools/compiler"
+export ZEPHYR_GCC_VARIANT=gccarmemb
+unset ZEPHYR_SDK_INSTALL_DIR
+source zephyr-env.sh
+
+cd samples/hello_world
+make BOARD=nucleo_l476rg
+  
 #### ukos
 
 http://ukos.ch/
@@ -238,6 +252,33 @@ https://github.com/micropython/micropython/wiki/Boards-Summary
   wint_t Problem: http://www.cplusplus.com/reference/cwchar/wint_t/
 * http://ukos.ch/
 
+##### Building micropython/stmhal
+
+The "stmhal" port requires an ARM compiler, arm-none-eabi-gcc, and associated bin-utils. For those using Arch Linux, you need arm-none-eabi-binutils and arm-none-eabi-gcc packages. Otherwise, try here: https://launchpad.net/gcc-arm-embedded
+
+To build:
+
+$ cd stmhal
+$ make
+
+You then need to get your board into DFU mode. On the pyboard, connect the 3V3 pin to the P1/DFU pin with a wire (on PYBv1.0 they are next to each other on the bottom left of the board, second row from the bottom).
+
+Then to flash the code via USB DFU to your device:
+
+$ make deploy
+
+This will use the included tools/pydfu.py script. If flashing the firmware does not work it may be because you don't have the correct permissions, and need to use sudo make deploy. See the README.md file in the stmhal/ directory for further details.
+
+###### Building micropython/zephyr
+
+Checkout Zephyr in the same parent directory.
+
+Build Zephyr demo (e.g. samples/hello_world)
+
+cd ../micropython/zephyr
+
+make BOARD=nucleo_l476rg
+
 ##### Extending
 
 http://micropython-dev-docs.readthedocs.io/en/latest/adding-module.html
@@ -323,6 +364,37 @@ https://visualgdb.com/tutorials/arm/stm32/adc/
 
 http://www.carminenoviello.com/2015/03/02/how-to-use-stm32-nucleo-serial-port/
 https://developer.mbed.org/teams/ST-Americas-mbed-Team/wiki/Creating-Console-Output
+
+#### USB
+
+https://hackaday.io/project/3579-12-mbps-communication-link-between-pc-and-mcu
+https://electronics.stackexchange.com/questions/61850/stm32-pc-serial-communication
+https://stackoverflow.com/questions/30602485/uart-over-usb-for-stm32-micro-controller
+http://www.linux-usb.org/usbnet/
+
+##### USB Host
+
+https://visualgdb.com/tutorials/arm/stm32/usb/
+http://www.st.com/content/ccc/resource/technical/document/user_manual/b8/5a/28/c2/cf/b6/47/d6/DM00105256.pdf/files/DM00105256.pdf/jcr:content/translations/en.DM00105256.pdfhttp://www.st.com/content/ccc/resource/technical/document/user_manual/b8/5a/28/c2/cf/b6/47/d6/DM00105256.pdf/files/DM00105256.pdf/jcr:content/translations/en.DM00105256.pdf
+
+Classes
+* Mass-Storage
+* HID (mouse & keyboard)
+* Audio
+* CDC virtual COM
+* MTP (Media transfer)
+
+#### USB Device
+
+http://www.st.com/content/ccc/resource/technical/document/user_manual/cf/38/e5/b5/dd/1d/4c/09/DM00108129.pdf/files/DM00108129.pdf/jcr:content/translations/en.DM00108129.pdf
+
+Classes
+* HID (mouse & keyboard)
+* Audio
+* CDC virtual COM
+* Mass-Storage
+* DFU Device Firmware Upgrade
+* Dual (Multi) Core (aka Classes)
 
 #### Avanced Problems
 

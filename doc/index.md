@@ -35,9 +35,18 @@ https://www.segger.com/products/debug-probes/j-link/models/j-link-base/
 
 http://www.openstm32.org/HomePage
 
+Important fix for Linux
+* Fedora (25): You need the following fake link: /lib/libncurses.so.5 -> /lib/libncurses.so.6
+* Ubuntu (17.04): You need to install the x86 libncurses lib
+
 http://www.coocox.org/software/coide.php
 
 http://www.emcu.eu/2017/03/13/how-to-use-stm32-and-arduino-ide/
+
+Important fix for Linux
+* The st-flash app that comes with the port is to old, you have to replace it <br/>
+  .arduino15/packages/STM32/tools/STM32Tools/2017.1.19/tools/linux64/stlink/st-flash <br/>
+  .arduino15/packages/STM32/tools/STM32Tools/2017.5.12/tools/linux64/stlink/st-flash
 
 ### Toolchains
 

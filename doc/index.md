@@ -27,6 +27,8 @@ https://www.segger.com/products/debug-probes/j-link/models/j-link-base/
 
 #### Cross-plattform
 
+http://www.openstm32.org/HomePage
+
 http://www.coocox.org/software/coide.php
 
 http://www.emcu.eu/2017/03/13/how-to-use-stm32-and-arduino-ide/
@@ -41,6 +43,8 @@ http://openocd.org/
 
 http://ymorin.is-a-geek.org/projects/kconfig-frontends
 http://ymorin.is-a-geek.org/git/kconfig-frontends/
+
+https://stackoverflow.com/questions/26961795/converting-from-hex-to-bin-for-arm-on-linux
 
 
 ## MCU STM32 Software Overview
@@ -61,9 +65,17 @@ https://github.com/BitThunder/bootthunder
 
 ### RTOS
 
+https://www.osrtos.com/
+https://en.m.wikipedia.org/wiki/Comparison_of_real-time_operating_systems
 http://stm32discovery.nano-age.co.uk/stm32-resources-and-links/open-source-real-time-operating-systems-for-the-stm32-and-cortex-m3-mpus
 
 #### FreeRTOS
+
+#### contiki
+
+http://www.contiki-os.org/
+https://github.com/contiki-os/contiki/tree/master/platform/stm32nucleo-spirit1
+https://github.com/cmtsij/contiki-stm32
 
 #### embed.org
 
@@ -101,7 +113,29 @@ https://www.zephyrproject.org/doc/boards/boards.html
 * Very many, mostly ARM-based
 * STM32 (of course) <br/>
   https://www.zephyrproject.org/doc/boards/arm/nucleo_l476rg/doc/nucleol476rg.html
+  
+#### ukos
 
+http://ukos.ch/
+
+##### Supported Plattforms
+
+* ARM Cortex M7, M4, M3: many STM32 boards
+* micropython port
+
+#### cocoOS
+
+http://www.cocoos.net/intro.html
+
+#### distortos
+
+http://distortos.org/documentation/ (STM32)
+
+##### Supported Plattforms
+
+* AVR
+* MSP430
+* STM32
 
 ### Interpreter
 
@@ -137,6 +171,7 @@ https://github.com/micropython/micropython/wiki/Boards-Summary
 * zephyr https://github.com/micropython/micropython/tree/master/zephyr
 * nuttx (?) https://bitbucket.org/nuttx/apps/src/f3dc5bea136e39134d3961f27101da423052356b/interpreters/?at=master <br/>
   wint_t Problem: http://www.cplusplus.com/reference/cwchar/wint_t/
+* http://ukos.ch/
 
 ##### Extending
 
@@ -205,9 +240,16 @@ https://community.st.com/thread/36017-mutual-exclusion-for-hal-using-freertos
 
 ### Full OS
 
+#### Linux
+
 http://www.uclinux.org/
 https://www.mikrocontroller.net/articles/Linux_auf_STM32
 http://www.emcraft.com/stm32f7-discovery-board/using-stm32-uart-ports-in-linux
+
+#### BSD
+
+https://github.com/sergev/LiteBSD/wiki (PIC32 only)
+http://retrobsd.org/wiki/doku.php (some boards, non STM32 or ARM)
 
 #### Libc Implementations
 
@@ -233,4 +275,9 @@ https://github.com/PX4
 
 http://mikrocontroller.bplaced.net/wordpress/?page_id=3195
 
+### IoT
+
+#### Iot RF
+
+http://www.st.com/content/st_com/en/products/wireless-connectivity/sub-1ghz-rf.html
 

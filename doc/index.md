@@ -10,6 +10,13 @@ http://www.mystm32.de/doku.php
 https://www.tutorialspoint.com/cprogramming/
 http://de.cppreference.com/w/
 
+### Async
+
+http://actortos.blogspot.ch/2015/02/actors-for-embedded-systems-and-rtos.html
+https://gist.github.com/Geal/8f85e02561d101decf9a (C Futures)
+https://en.m.wikipedia.org/wiki/QP_(framework)
+http://www.erlang-embedded.com/
+
 ## Hardware Overview
 
 ### STM32 Overview
@@ -26,6 +33,8 @@ http://www.openjtag.org/index.php (old)
 
 https://www.segger.com/products/debug-probes/j-link/models/j-link-edu/
 https://www.segger.com/products/debug-probes/j-link/models/j-link-base/
+
+http://viewtool.com/index.php/en/
 
 ## PC Software Overview
 
@@ -68,7 +77,13 @@ https://stackoverflow.com/questions/26961795/converting-from-hex-to-bin-for-arm-
 
 ### HAL Layers
 
+* Qube from STM
+
+http://chibios.org/dokuwiki/doku.php?id=chibios:product:hal:start
+
 ### Drivers
+
+* STM32F4x7 beinhalten wired TCP/IP
 
 http://libopencm3.org/
 https://github.com/libopencm3/libopencm3
@@ -85,8 +100,19 @@ https://github.com/BitThunder/bootthunder
 https://www.osrtos.com/
 https://en.m.wikipedia.org/wiki/Comparison_of_real-time_operating_systems
 http://stm32discovery.nano-age.co.uk/stm32-resources-and-links/open-source-real-time-operating-systems-for-the-stm32-and-cortex-m3-mpus
+http://www.ethernut.de/nutwiki/index.php/EmbeddedOsLinks
 
 #### FreeRTOS
+
+http://www.freertos.org/FreeRTOS-for-STM32F4xx-Cortex-M4F-IAR.html
+http://www.freertos.org/FreeRTOS-Plus/BSP_Solutions/st/index.html
+
+##### Features
+
+Net
+http://www.freertos.org/FreeRTOS-For-STM32-Connectivity-Line-With-WEB-Server-Example.html
+http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_TCP/index.html
+http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_UDP/FreeRTOS_Plus_UDP.shtml
 
 #### contiki
 
@@ -118,7 +144,7 @@ https://github.com/bluejava/zousan
 But mongoose-os can use multiple threads
 https://github.com/cesanta/mongoose/blob/dev/examples/multithreaded/multithreaded.c
 
-###### Supported Plattforms
+###### Supported platforms
 
 * esp8266
 * esp32
@@ -128,8 +154,18 @@ https://github.com/cesanta/mongoose/blob/dev/examples/multithreaded/multithreade
 #### NuttX
 
 http://www.nuttx.org
+http://www.nuttx.org/Documentation/NuttX.html
 https://bitbucket.org/nuttx/nuttx
 https://bitbucket.org/nuttx/apps
+http://nuttx.org/doku.php?id=documentation:userguide
+
+http://nuttx.org/doku.php?id=wiki:howtos:waitinterrupt
+
+##### Features
+
+Topic: Posix, Apps
+
+* Net https://bitbucket.org/nuttx/nuttx/src/fa2c7a694fbe76dfedf58935d9582afcfba2caa1/drivers/net/?at=master
 
 ##### Build NuttX for STM32
 
@@ -150,7 +186,9 @@ Result:
 
 #### Zephyr
 
-###### Supported Plattforms
+https://www.zephyrproject.org/doc/application/application.html
+
+###### Supported platforms
 
 https://www.zephyrproject.org/doc/boards/boards.html
 
@@ -171,12 +209,38 @@ source zephyr-env.sh
 
 cd samples/hello_world
 make BOARD=nucleo_l476rg
+
+#### riot-os
+
+http://riot-os.org/
+https://github.com/RIOT-OS/RIOT
+
+##### Supported platforms
+
+https://github.com/RIOT-OS/RIOT/wiki/RIOT-Platforms
+
+* many boards
+* many stm32
+
+#### tiny-os
+
+https://github.com/tinyos/tinyos-main
+
+###### Supported plattforms
+
+http://tinyos.stanford.edu/tinyos-wiki/index.php/Platform_Hardware
+
+* nothing interesting, except Lego Mind Storm
+
+#### ChibiOS RT/NIL
+
+http://chibios.org/dokuwiki/doku.php
   
 #### ukos
 
 http://ukos.ch/
 
-##### Supported Plattforms
+##### Supported platforms
 
 * ARM Cortex M7, M4, M3: many STM32 boards
 * micropython port
@@ -189,7 +253,7 @@ http://www.cocoos.net/intro.html
 
 http://distortos.org/documentation/ (STM32)
 
-##### Supported Plattforms
+##### Supported platforms
 
 * AVR
 * MSP430
@@ -205,7 +269,7 @@ http://iotjs.net/
 https://github.com/Samsung/iotjs
 http://jerryscript.net/
 
-###### Supported Plattforms
+###### Supported platforms
 
 https://github.com/Samsung/iotjs/blob/master/docs/help/Getting-Started.md
 
@@ -213,6 +277,16 @@ https://github.com/Samsung/iotjs/blob/master/docs/help/Getting-Started.md
 * NuttX
 * Raspberry Pi 2
 * STM32 (planned)
+
+##### Espruino
+
+http://www.espruino.com/
+https://github.com/espruino/Espruino
+http://www.espruino.com/Modules
+
+##### Supported platforms
+
+http://jeelabs.org/book/1548e/index.html (STM32)
 
 #### Python
 
@@ -249,7 +323,7 @@ Extension for async/await is available
 https://github.com/peterhinch/micropython-async
 https://forum.micropython.org/viewtopic.php?t=2876
 
-##### Supported Plattforms
+##### Supported platforms
 
 https://github.com/micropython/micropython/wiki
 https://github.com/micropython/micropython/wiki/Boards-Summary
@@ -293,7 +367,7 @@ make BOARD=nucleo_l476rg
 http://micropython-dev-docs.readthedocs.io/en/latest/adding-module.html
 https://forum.micropython.org/viewtopic.php?t=530
 
-###### Supported Plattforms
+###### Supported platforms
 
 https://github.com/micropython/micropython/wiki/Boards-Summary
 
@@ -345,7 +419,7 @@ SOLUTION
 
 * Edit utils/mkfs.lua and comment out 'require("pack")' with '--'
 
-##### Supported Plattforms
+##### Supported platforms
 
 http://wiki.eluaproject.net/Boards
 
@@ -358,6 +432,9 @@ http://wiki.eluaproject.net/Boards
 Event Loop based (Cooperative MT)
 http://elua-development.2368040.n2.nabble.com/eLua-vs-Lua-on-RTOS-td5959889.html
 
+Interrupts
+http://www.eluaproject.net/doc/v0.9/en_inthandlers.html
+
 Interpreter is not reentrantable
 https://stackoverflow.com/questions/8816386/is-it-okay-calling-lua-function-from-different-threadembedding-lua-in-c
 
@@ -365,6 +442,10 @@ Extension for coroutines is available (but hardly used)
 http://elua-development.2368040.n2.nabble.com/Pure-Lua-multitasking-with-eLua-td7578258.html
 https://github.com/xopxe/eLumen
 https://github.com/xopxe/Lumen
+
+RTOS integration (not wanted!)
+http://elua-development.2368040.n2.nabble.com/eLua-and-RTOS-integration-td2421909.html
+https://github.com/linvinus/chibios_with_elua
 
 #### Other
 
@@ -374,6 +455,11 @@ https://github.com/xopxe/Lumen
 
 http://mikrocontroller.bplaced.net/wordpress/?page_id=3191
 http://www.emcu.it/STemWin/STemWin.html
+
+#### NX (nuttx)
+
+http://nuttx.org/Documentation/NxWidgets.html
+http://nuttx.org/Documentation/NXGraphicsSubsystem.html
 
 ### STM32 Programming
 
@@ -448,6 +534,53 @@ Classes
 
 https://community.st.com/thread/36017-mutual-exclusion-for-hal-using-freertos
 
+### IoT
+
+https://github.com/AoLab/awesome-iot-1
+https://github.com/Agile-IoT/awesome-open-iot
+
+#### Iot RF
+
+http://www.st.com/content/st_com/en/products/wireless-connectivity/sub-1ghz-rf.html
+https://de.m.wikipedia.org/wiki/Sigfox
+
+#### IoT TCP/IP
+
+##### Stacks
+
+http://www.nongnu.org/lwip/2_0_x/index.html
+http://lwip.wikia.com/wiki/ARP
+
+https://www.oryx-embedded.com/cyclone_tcp.html
+
+http://www.microchip.com/SWLibraryWeb/product.aspx?product=TCPIPSTACK
+https://github.com/x893/Microchip/blob/master/TCPIP/Demo%20App%20MDD%20STM32/MainDemo.c
+
+* nuttx
+* riot
+* contiki
+
+#### Projects
+
+https://balau82.wordpress.com/2015/12/07/dhcp-client-on-stm32-nucleo-and-w5100/
+http://mikrocontroller.bplaced.net/wordpress/?page_id=2434
+https://www.mikrocontroller.net/topic/296181
+
+http://acme.com/software/thttpd/
+
+#### wired
+
+#### wireless
+
+nRF24L01
+* nuttx 
+
+W5100
+* STM32 bare metal https://www.mikrocontroller.net/topic/363765 <br/>
+  https://github.com/cnoviello/stm32-w5100
+* Riot http://riot-os.org/api/group__drivers__w5100.html
+
+
 ### Full OS
 
 #### Linux
@@ -491,9 +624,3 @@ http://mikrocontroller.bplaced.net/wordpress/?page_id=3195
 
 https://www.mikrocontroller.net/articles/Drehgeber
 
-### IoT
-
-#### Iot RF
-
-http://www.st.com/content/st_com/en/products/wireless-connectivity/sub-1ghz-rf.html
-https://de.m.wikipedia.org/wiki/Sigfox

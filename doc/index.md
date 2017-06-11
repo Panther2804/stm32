@@ -172,7 +172,8 @@ Topic: Posix, Apps
 clone nuttx and apps
 
 cd tools/
- ./configure.sh stm32l476vg-disco/nsh
+./configure.sh stm32l476vg-disco/nsh
+./configure.sh nucleo-f4x1re/f401-nsh
 
 export PATH=/opt/stm32/ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.13.1.201705091103/tools/compiler/bin:$PATH
 

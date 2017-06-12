@@ -38,8 +38,8 @@ void Initializegpio()
 
 int main(void)
 {
-	/*Initializegpio();
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
+	Initializegpio();
+	/*HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
 	test++;
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_SET);
 	test++;

@@ -11,6 +11,7 @@
 
 #include <stm32l4xx.h>
 #include <stm32l476g_discovery.h>
+#include <stm32l476g_discovery_glass_lcd.h>
 
 // https://visualgdb.com/tutorials/arm/stm32/timers/hal/
 void InitializeLED()
@@ -34,6 +35,8 @@ void InitializeLED()
     GPIO_InitStructure2.Speed = GPIO_SPEED_HIGH;
     GPIO_InitStructure2.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOE, &GPIO_InitStructure2);
+
+    BSP_LCD_GLASS_Init();
 }
 
 int main(void)
@@ -42,11 +45,17 @@ int main(void)
 	for(;;) {
 		// http://www.openstm32.org/tiki-view_forum_thread.php?forumId=7&comments_parentId=1443&highlight=l476
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_2);
-		HAL_Delay(100);
+		BSP_LCD_GLASS_Clear();
+		BSP_LCD_GLASS_DisplayString((uint8_t*)"Hello");
+		HAL_Delay(1000);
 		// for (int i = 0; i < 100000; ++i);
 		HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_8);
-		HAL_Delay(200);
+		BSP_LCD_GLASS_Clear();
+		BSP_LCD_GLASS_DisplayString((uint8_t*)"World");
+		HAL_Delay(2000);
 		// for (int i = 0; i < 100000; ++i);
 	}
+
+	BSP_LCD_GLASS_DeInit();
 	HAL_DeInit();
 }

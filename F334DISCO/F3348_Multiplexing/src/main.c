@@ -11,7 +11,7 @@
 
 #include "stm32f3xx.h"
 #include "stm32f3348_discovery.h"
-char test = 10;
+char test = 1;
 
 
 void Initializegpio()
@@ -75,6 +75,7 @@ void Multiplex(/*uint8_t*/ unsigned char value) {
 		} else {
 			//puts("0");
 			HAL_Delay(1);
+			value >>= 1;
 		}
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
 		HAL_Delay(1);
@@ -82,6 +83,6 @@ void Multiplex(/*uint8_t*/ unsigned char value) {
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
 	HAL_Delay(1);
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
-	value >>= 1;
+
 
 }

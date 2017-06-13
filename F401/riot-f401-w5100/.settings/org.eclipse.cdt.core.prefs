@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+environment/project/fr.ac6.managedbuild.toolchain.gnu.cross.base.772961995.373627615/BOARD/delimiter=\:
+environment/project/fr.ac6.managedbuild.toolchain.gnu.cross.base.772961995.373627615/BOARD/operation=append
+environment/project/fr.ac6.managedbuild.toolchain.gnu.cross.base.772961995.373627615/BOARD/value=nucleo-f401
+environment/project/fr.ac6.managedbuild.toolchain.gnu.cross.base.772961995.373627615/append=true
+environment/project/fr.ac6.managedbuild.toolchain.gnu.cross.base.772961995.373627615/appendContributed=true
+environment/project/fr.ac6.managedbuild.toolchain.gnu.cross.base.772961995/BOARD/delimiter=\:
+environment/project/fr.ac6.managedbuild.toolchain.gnu.cross.base.772961995/BOARD/operation=append
+environment/project/fr.ac6.managedbuild.toolchain.gnu.cross.base.772961995/BOARD/value=nucleo-f401
+environment/project/fr.ac6.managedbuild.toolchain.gnu.cross.base.772961995/append=true
+environment/project/fr.ac6.managedbuild.toolchain.gnu.cross.base.772961995/appendContributed=true

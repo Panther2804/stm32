@@ -8,18 +8,9 @@
   ******************************************************************************
 */
 
-
-#include "stm32f3xx.h"
-#include "stm32f3348_discovery.h"
-
-#define SER		GPIO_PIN_0
-#define RCLK	GPIO_PIN_1
-#define SRCLK	GPIO_PIN_2
-
-#define DELAY	10
+#include "main.h"
 
 unsigned char test = 0xF0;
-
 
 void Initializegpio()
 {
@@ -42,7 +33,6 @@ void Initializegpio()
     HAL_GPIO_Init(GPIOB, &GPIO_InitStructure1);
 
     HAL_GPIO_WritePin(GPIOA, RCLK, GPIO_PIN_SET);
-
 }
 
 int main(void)

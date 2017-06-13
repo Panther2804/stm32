@@ -74,18 +74,10 @@ void Multiplex(/*uint8_t*/ unsigned char value) {
 		HAL_GPIO_WritePin(GPIOA, SRCLK, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(GPIOA, RCLK, GPIO_PIN_RESET);
 		HAL_Delay(DELAY);
-		if (value & 0x1) {
-			//puts("1");
-			HAL_GPIO_WritePin(GPIOA, SER, GPIO_PIN_SET);
-			HAL_Delay(DELAY);
-			HAL_GPIO_WritePin(GPIOA, SRCLK, GPIO_PIN_SET);
 
-		} else {
-			//puts("0");
-			HAL_GPIO_WritePin(GPIOA, SER, GPIO_PIN_RESET);
-			HAL_Delay(DELAY);
-			HAL_GPIO_WritePin(GPIOA, SRCLK, GPIO_PIN_SET);
-		}
+		HAL_GPIO_WritePin(GPIOA, SER, (value & 0x1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+		HAL_Delay(DELAY);
+		HAL_GPIO_WritePin(GPIOA, SRCLK, GPIO_PIN_SET);
 		HAL_Delay(DELAY);
 		HAL_GPIO_WritePin(GPIOA, RCLK, GPIO_PIN_SET);
 		HAL_Delay(DELAY);

@@ -24,7 +24,7 @@
 #define RCLK	GPIO_PIN_1
 #define SRCLK	GPIO_PIN_2
 
-#define DELAY	10
+#define DELAY	1
 
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */

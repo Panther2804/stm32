@@ -25,7 +25,7 @@
 #define SRCLK	GPIO_PIN_2
 #define OE      GPIO_PIN_3
 
-#define DELAY	1
+#define DELAY   0
 
 #define SIZE_LINE_OF_MATRIX	4
 

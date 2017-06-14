@@ -12,6 +12,8 @@
 
 unsigned char test = 0;
 char num = 0;
+int loop = 0;
+char pos = 1;
 
 unsigned char a[SIZE_LINE_OF_MATRIX];
 unsigned char b[SIZE_LINE_OF_MATRIX];
@@ -61,7 +63,8 @@ int main(void) {
 	for (;;) {
 		// test++;
 
-		a[0] = 1;
+       
+		a[pos] = 1;
 		b[1] = 1;
 		c[2] = 1;
 		d[3] = 1;
@@ -110,6 +113,7 @@ void Matrix(void) {
 			}
 		}
 		Multiplex(test);
+		HAL_Delay(1);
 		test = 0;
 	}
 }

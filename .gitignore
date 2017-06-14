@@ -3,8 +3,13 @@
 *.bin
 *.elf
 *.hex
+
+# stm32 HAL and other ST libs
 Release/
 Debug/
 Utilities/
 HAL_Driver/
 CMSIS/
+
+# RIOT-OS
+bin/

@@ -23,8 +23,11 @@
 #define SER		GPIO_PIN_0
 #define RCLK	GPIO_PIN_1
 #define SRCLK	GPIO_PIN_2
+#define OE      GPIO_PIN_3
 
 #define DELAY	1
+
+#define SIZE_LINE_OF_MATRIX	4
 
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */

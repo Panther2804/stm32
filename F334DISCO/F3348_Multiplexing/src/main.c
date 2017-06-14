@@ -13,11 +13,11 @@
 unsigned char test = 0;
 char num = 0;
 
-unsigned char a[3];
-unsigned char b[3];
-unsigned char c[3];
-unsigned char d[3];
-unsigned char m[3];
+unsigned char a[SIZE_LINE_OF_MATRIX];
+unsigned char b[SIZE_LINE_OF_MATRIX];
+unsigned char c[SIZE_LINE_OF_MATRIX];
+unsigned char d[SIZE_LINE_OF_MATRIX];
+unsigned char m[SIZE_LINE_OF_MATRIX];
 
 void Initializegpio() {
 	HAL_Init();
@@ -27,7 +27,7 @@ void Initializegpio() {
 	;
 
 	GPIO_InitTypeDef GPIO_InitStructure0;
-	GPIO_InitStructure0.Pin = SER | RCLK | SRCLK;
+	GPIO_InitStructure0.Pin = SER | RCLK | SRCLK | OE;
 	GPIO_InitStructure0.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStructure0.Speed = GPIO_SPEED_HIGH;
 	GPIO_InitStructure0.Pull = GPIO_NOPULL;
@@ -61,16 +61,16 @@ int main(void) {
 	for (;;) {
 		// test++;
 
-    a[0] = 1;
-    b[1] = 1;
-    c[2] = 1;
-    d[3] = 1;
-    Matrix();
+		a[0] = 1;
+		b[1] = 1;
+		c[2] = 1;
+		d[3] = 1;
+		Matrix();
 	}
 	HAL_DeInit();
 }
 
-void Matrix() {
+void Matrix(void) {
 	test = 0;
 	for (char i = 0; i < 4; i++) {
 		switch (i) {
@@ -102,38 +102,35 @@ void Matrix() {
 			m[3] = d[3];
 			test = (test | (1 << 3));
 			break;
-
 		}
 
-		for (char o = 0; o < 4; o++) {
-
+		for (int o = 0; o < 4; o++) {
 			if (m[o] == 1) {
-				test = (test | (1 << o + 4));
+				test = (test | (1 << (o + 4)));
 			}
 		}
 		Multiplex(test);
 		test = 0;
-
 	}
-
 }
-
 
 void Multiplex(/*uint8_t*/unsigned char value) {
-for (int i = 0; i < 8; ++i) {
-	HAL_GPIO_WritePin(GPIOA, SRCLK, GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(GPIOA, RCLK, GPIO_PIN_RESET);
-	HAL_Delay(DELAY);
+	HAL_GPIO_WritePin(GPIOA, OE, GPIO_PIN_SET);
+	for (int w = 0; w < 8; ++w) {
+		HAL_GPIO_WritePin(GPIOA, SRCLK, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOA, RCLK, GPIO_PIN_RESET);
+		HAL_Delay(DELAY);
 
-	HAL_GPIO_WritePin(GPIOA, SER,
-			(value & 0x1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-	HAL_Delay(DELAY);
-	HAL_GPIO_WritePin(GPIOA, SRCLK, GPIO_PIN_SET);
-	HAL_Delay(DELAY);
+		HAL_GPIO_WritePin(GPIOA, SER,
+				(value & 0x1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+		HAL_Delay(DELAY);
+		HAL_GPIO_WritePin(GPIOA, SRCLK, GPIO_PIN_SET);
+		HAL_Delay(DELAY);
+		HAL_GPIO_WritePin(GPIOA, RCLK, GPIO_PIN_SET);
+		HAL_Delay(DELAY);
+
+		value >>= 1;
+	}
 	HAL_GPIO_WritePin(GPIOA, RCLK, GPIO_PIN_SET);
-	HAL_Delay(DELAY);
-
-	value >>= 1;
-}
-HAL_GPIO_WritePin(GPIOA, RCLK, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOA, OE, GPIO_PIN_RESET);
 }

@@ -4,7 +4,7 @@ APPLICATION = gnrc_networking
 
 # If no BOARD is found in the environment, use this default:
 # BOARD ?= native
-BOARD ?= nucleo-f401
+BOARD ?= nucleo-f401-w5100
 
 # This has to be the absolute path to the RIOT base directory:
 # RIOTBASE ?= $(CURDIR)/../..

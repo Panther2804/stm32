@@ -38,6 +38,7 @@
  */
 
 // https://riot-os.org/api/group__drivers__periph__gpio.html
+/*
 #define W5100_PARAM_SPI			(SPI_DEV(0)) 			// ???
 #define W5100_PARAM_SPI_CLK		(SPI_CLK_5MHZ)
 
@@ -47,6 +48,7 @@
 #define W5100_PARAM_EVT			(GPIO_PIN(PORT_A, 10))	// PA_10
 
 #define MINI_SD					(GPIO_PIN(PORT_B, 5))	// PB_5
+*/
 
 #include <stdio.h>
 #include <periph/gpio.h>
@@ -65,7 +67,9 @@ static const shell_command_t shell_commands[] = {
     { NULL, NULL, NULL }
 };
 
+
 void init(void) {
+	/*
 	// init SPI
 	spi_init(W5100_PARAM_SPI);
 	// probably not needed
@@ -88,6 +92,7 @@ void init(void) {
 		puts("gpio_init W5100 failed");
 	}
 	gpio_clear(W5100_PARAM_CS);
+	*/
 }
 
 int main(void)

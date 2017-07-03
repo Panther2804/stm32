@@ -36,28 +36,51 @@ https://www.segger.com/products/debug-probes/j-link/models/j-link-base/
 
 http://viewtool.com/index.php/en/
 
+#### Serial Console
+
+* https://unix.stackexchange.com/questions/283924/how-can-minicom-permanently-translate-incoming-newline-n-to-crlf
+
 ## PC Software Overview
 
 ### IDEs
 
+* http://www.emcu.it/STM32/What_should_I_use_to_develop_on_STM32/What_should_I_use_to_develop_on_STM32.html
+
 #### Cross-plattform
 
-http://www.openstm32.org/HomePage
+#### Eclipse based
+
+* http://www.emcu.it/STM32/What_should_I_use_to_develop_on_STM32/What_should_I_use_to_develop_on_STM32.html
+* http://www.emcu.it/STM32/What_should_I_use_to_develop_on_STM32/stm32f0_linux_dvlpt.pdf
+
+##### AC6 (openstm32)
+
+* http://www.openstm32.org/HomePage
 
 Important fix for Linux
 * Fedora (25): You need the following fake link: /lib/libncurses.so.5 -> /lib/libncurses.so.6
 * Ubuntu (17.04): You need to install the x86 libncurses lib
 
-http://www.coocox.org/software/coide.php
+##### Arduino IDE
 
-http://www.emcu.eu/2017/03/13/how-to-use-stm32-and-arduino-ide/
+* http://www.emcu.eu/2017/03/13/how-to-use-stm32-and-arduino-ide/
 
 Important fix for Linux
 * The st-flash app that comes with the port is to old, you have to replace it <br/>
   .arduino15/packages/STM32/tools/STM32Tools/2017.1.19/tools/linux64/stlink/st-flash <br/>
   .arduino15/packages/STM32/tools/STM32Tools/2017.5.12/tools/linux64/stlink/st-flash
 
+##### PlatformIO IDE
+
+* http://platformio.org/platformio-ide
+
+#### Restricted (to one OS)
+
+* http://www.coocox.org/software/coide.php (windows)
+
 ### Toolchains
+
+* http://platformio.org/get-started
 
 #### Debugger and Flashing Software
 
@@ -346,7 +369,8 @@ http://gort.io/
 
 ### STM32 Projects
 
-http://www.runeaudio.com/about/ (CPU)
+* http://www.runeaudio.com/about/ (CPU)
+* http://mikrocontroller.bplaced.net/wordpress/
 
 #### Autopilot
 

@@ -1,16 +1,16 @@
 # STM32 Programming
 
-https://stm32f4-discovery.net/
-http://fab.cba.mit.edu/classes/863.13/tutorials/EmbeddedProgramming/stm32.html
-http://www.st.com/content/st_com/en/support/learning/stm32-education.html
+* https://stm32f4-discovery.net/
+* http://fab.cba.mit.edu/classes/863.13/tutorials/EmbeddedProgramming/stm32.html
+* http://www.st.com/content/st_com/en/support/learning/stm32-education.html
 
-http://www.st.com/content/ccc/resource/technical/document/user_manual/2d/60/ff/15/8c/c9/43/77/DM00105262.pdf/files/DM00105262.pdf/jcr:content/translations/en.DM00105262.pdf
+* http://www.st.com/content/ccc/resource/technical/document/user_manual/2d/60/ff/15/8c/c9/43/77/DM00105262.pdf/files/DM00105262.pdf/jcr:content/translations/en.DM00105262.pdf
 
-https://visualgdb.com/tutorials/arm/stm32
-https://visualgdb.com/w/tutorials/category/tutorials/embedded/stm32_periph/
-https://visualgdb.com/w/tutorials/category/tutorials/embedded/stm32_tools/
+* https://visualgdb.com/tutorials/arm/stm32
+* https://visualgdb.com/w/tutorials/category/tutorials/embedded/stm32_periph/
+* https://visualgdb.com/w/tutorials/category/tutorials/embedded/stm32_tools/
 
-https://learn.adafruit.com/dash-hacking-bare-metal-stm32-programming/programming
+* https://learn.adafruit.com/dash-hacking-bare-metal-stm32-programming/programming
 
 ## Old BUT RECOMMENDED
 
@@ -69,5 +69,6 @@ Classes
 
 ## Avanced Problems
 
-https://community.st.com/thread/36017-mutual-exclusion-for-hal-using-freertos
+* https://community.st.com/thread/36017-mutual-exclusion-for-hal-using-freertos
+* http://vjordan.info/log/fpga/stm32f4-generating-parallel-signals-with-the-fsmc.html
 

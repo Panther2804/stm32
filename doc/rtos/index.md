@@ -19,16 +19,31 @@ http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_UDP/FreeRTOS_Plus_UDP.shtml
 
 ## contiki
 
-http://www.contiki-os.org/
-https://github.com/contiki-os/contiki/tree/master/platform/stm32nucleo-spirit1
-https://github.com/cmtsij/contiki-stm32
+* http://www.contiki-os.org/
+* http://www.contiki-os.org/start.html
+
+* https://github.com/contiki-os/contiki/tree/master/platform/stm32nucleo-spirit1
+* https://github.com/cmtsij/contiki-stm32
 
 ## embed.org
 
-https://developer.mbed.org
-https://developer.mbed.org/platforms/ST-Discovery-L476VG/
-https://docs.mbed.com/docs/mbed-os-handbook/en/latest/dev_tools/cli/
-https://docs.mbed.com/docs/mbed-os-handbook/en/latest/getting_started/blinky_cli/
+* https://developer.mbed.org
+* https://developer.mbed.org/platforms/ST-Discovery-L476VG/
+* https://docs.mbed.com/docs/mbed-os-handbook/en/latest/dev_tools/cli/
+* https://developer.mbed.org/teams/ST/wiki/Matrix-of-tested-boards
+
+### embed.org subprojects
+
+* https://github.com/ARMmbed/pal
+* https://github.com/ARMmbed/yotta
+* https://connector.mbed.com/ (for security.h)
+
+### embed.org examples
+
+* https://docs.mbed.com/docs/mbed-os-handbook/en/latest/getting_started/blinky_cli/
+* https://github.com/ARMmbed/example-asynch-spi
+* https://developer.mbed.org/teams/mbed-os-examples/
+* https://developer.mbed.org/teams/ST/code/mbed-os-example-client/ (6LoWPAN)
 
 ## mongoose-os (JavaScript)
 
@@ -56,13 +71,17 @@ https://github.com/cesanta/mongoose/blob/dev/examples/multithreaded/multithreade
 
 ## NuttX
 
-http://www.nuttx.org
-http://www.nuttx.org/Documentation/NuttX.html
-https://bitbucket.org/nuttx/nuttx
-https://bitbucket.org/nuttx/apps
-http://nuttx.org/doku.php?id=documentation:userguide
+* http://www.nuttx.org
+* http://www.nuttx.org/Documentation/NuttX.html
+* https://bitbucket.org/nuttx/nuttx
+* https://bitbucket.org/nuttx/apps
+* http://nuttx.org/doku.php?id=documentation:userguide
+* https://phreakuencies.gitlab.io/nuttx_book/
 
-http://nuttx.org/doku.php?id=wiki:howtos:waitinterrupt
+* http://nuttx.org/doku.php?id=wiki:howtos:waitinterrupt
+* http://nuttx.org/doku.php?id=wiki:getting-started:stm32f4discovery_unix
+* http://nuttx.org/doku.php?id=wiki:howtos:stm32-null-pointer
+* http://nuttx.org/doku.php?id=wiki:howtos:stm32-ccm-alloc
 
 ### Features
 
@@ -116,15 +135,22 @@ make BOARD=nucleo_l476rg
 
 ## riot-os
 
-http://riot-os.org/
-https://github.com/RIOT-OS/RIOT
+* http://riot-os.org/
+* https://github.com/RIOT-OS/RIOT
+* https://github.com/RIOT-OS/Tutorials/blob/master/README.md
+
+* https://riot-os.org/api/group__net__gnrc.html
+* https://github.com/RIOT-OS/RIOT/wiki/Model-for-the-network-stack
 
 ### Supported platforms
 
-https://github.com/RIOT-OS/RIOT/wiki/RIOT-Platforms
+* https://github.com/RIOT-OS/RIOT/wiki/RIOT-Platforms
 
 * many boards
 * many stm32
+  + https://github.com/RIOT-OS/RIOT/wiki/Board%3A-Nucleo-F334
+  + https://github.com/RIOT-OS/RIOT/wiki/Board:-Nucleo-F401
+  + https://github.com/RIOT-OS/RIOT/issues/6721
 
 ## tiny-os
 
@@ -138,7 +164,8 @@ http://tinyos.stanford.edu/tinyos-wiki/index.php/Platform_Hardware
 
 ## ChibiOS RT/NIL
 
-http://chibios.org/dokuwiki/doku.php
+* http://chibios.org/dokuwiki/doku.php
+* http://wiki.chibios.org/dokuwiki/doku.php?id=chibios:community:plans:external_ram
   
 ## ukos
 

@@ -38,6 +38,15 @@
 * https://developer.mbed.org/users/Bongjun/code/WIZnet_Library/
 * https://developer.mbed.org/questions/61561/How-to-create-Simple-Web-Server-with-Mbe/
 * https://doc.riot-os.org/group__drivers__w5100.html
+* https://beelogger.de/?page_id=28
+
+* https://github.com/balau/nucleo_tests/blob/master/src/w5100_spi.c
+* https://balau82.wordpress.com/2015/12/07/dhcp-client-on-stm32-nucleo-and-w5100/
+* https://balau82.wordpress.com/2016/07/03/stm32-nucleo-access-sd-cards-with-c-standard-library/
+
+* STM32 bare metal https://www.mikrocontroller.net/topic/363765 <br/>
+  https://github.com/cnoviello/stm32-w5100
+* Riot http://riot-os.org/api/group__drivers__w5100.html
 
 #### Ardunio Ethernet Shields (W5100 and W5500 based)
 
@@ -61,6 +70,21 @@
 * https://sminghub.github.io/Sming/
 * https://github.com/SmingHub/Sming
 * https://visualgdb.com/tutorials/esp8266/rtos/
+* https://www.microcontroller.net/articles/ESP8266
+* https://en.wikipedia.org/wiki/ESP8266
+* https://www.letscontrolit.com/index.php/Main_Page
+* https://github.com/jeelabs/esp-link
+
+#### ESP8266 for linux
+
+* https://hackaday.io/post/28712
+* https://github.com/al177/esp8089
+
+### ESP32
+
+* https://www.heise.de/make/artikel/Espressif-ESP32-3256039.html
+* https://github.com/espressif/arduino-esp32
+* http://www.stm32duino.com/viewtopic.php?t=1820
 
 ### nRF24L01 (2011)
 

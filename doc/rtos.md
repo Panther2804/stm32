@@ -21,6 +21,7 @@ http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_UDP/FreeRTOS_Plus_UDP.shtml
 
 * http://www.contiki-os.org/
 * http://www.contiki-os.org/start.html
+* https://github.com/sics-iot/calipso/tree/master/contiki80211
 
 * https://github.com/contiki-os/contiki/tree/master/platform/stm32nucleo-spirit1
 * https://github.com/cmtsij/contiki-stm32
@@ -43,7 +44,7 @@ http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_UDP/FreeRTOS_Plus_UDP.shtml
 * https://docs.mbed.com/docs/mbed-os-handbook/en/latest/getting_started/blinky_cli/
 * https://github.com/ARMmbed/example-asynch-spi
 * https://developer.mbed.org/teams/mbed-os-examples/
-* https://developer.mbed.org/teams/ST/code/mbed-os-example-client/ (6LoWPAN)
+* https://github.com/ARMmbed/mbed-os
 
 ## mongoose-os (JavaScript)
 
@@ -82,6 +83,7 @@ https://github.com/cesanta/mongoose/blob/dev/examples/multithreaded/multithreade
 * http://nuttx.org/doku.php?id=wiki:getting-started:stm32f4discovery_unix
 * http://nuttx.org/doku.php?id=wiki:howtos:stm32-null-pointer
 * http://nuttx.org/doku.php?id=wiki:howtos:stm32-ccm-alloc
+* http://nuttx.org/doku.php?id=wiki:networking:testing
 
 ### Features
 

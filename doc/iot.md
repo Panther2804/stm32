@@ -4,6 +4,7 @@
 * https://github.com/Agile-IoT/awesome-open-iot
 * https://www.linux.com/NEWS/21-OPEN-SOURCE-PROJECTS-IOT
 * https://www.linux.com/news/linux-and-open-source-hardware-iot
+* http://www.emcu.it/IoT/IoT.html
 
 ## IoT boards
 
@@ -14,6 +15,8 @@
 ## IoT Network Basics and Standards
 
 * https://en.wikipedia.org/wiki/Named_data_networking
+* https://de.wikipedia.org/wiki/IEEE_802.15.4
+* https://en.wikipedia.org/wiki/Comparison_of_802.15.4_radio_modules
 
 ### 6LoWPAN
 
@@ -52,7 +55,10 @@ http://www.emcu.it/Wireless/SubGHz/Sub1Ghz.html
 #### embed.org
 
 * https://github.com/ARMmbed/nanostack-border-router
+  + https://developer.mbed.org/teams/mbed-os-examples/code/nanostack-border-router/file/85f4174a8e29/README.md
 * https://github.com/ARMmbed/mbed-access-point
+* https://developer.mbed.org/teams/ST/code/mbed-os-example-client/ (6LoWPAN)
+* https://developer.mbed.org/teams/ST/code/mbed-os-example-client/rev/d0c254f237c4
 
 ### IoT Wifi
 

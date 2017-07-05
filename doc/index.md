@@ -1,9 +1,10 @@
 # STM32 Overview 
 
-https://www.open-electronics.org/lets-code-with-stm32-nucleo/
-https://www.mikrocontroller.net/articles/STM32
-https://www.mikrocontroller.net/articles/STM32_f%C3%BCr_Einsteiger
-http://www.mystm32.de/doku.php
+* https://www.open-electronics.org/lets-code-with-stm32-nucleo/
+* https://www.mikrocontroller.net/articles/STM32
+* https://www.mikrocontroller.net/articles/STM32_f%C3%BCr_Einsteiger
+* http://www.mystm32.de/doku.php
+* https://stackoverflow.com/questions/tagged/stm32
 
 ## C Lang
 
@@ -149,10 +150,12 @@ http://jeelabs.org/book/1548e/index.html (STM32)
 
 #### Python
 
-https://micropython.org/
-https://github.com/micropython/micropython
-http://docs.micropython.org/en/latest/wipy/reference/constrained.html
-http://docs.micropython.org/en/latest/wipy/reference/speed_python.html
+* https://micropython.org/
+* https://github.com/micropython/micropython
+* http://docs.micropython.org/en/latest/wipy/reference/constrained.html
+* http://docs.micropython.org/en/latest/wipy/reference/speed_python.html
+* https://lwn.net/Articles/648051/
+* https://lwn.net/Articles/723418/
 
 ##### Pycom.io
 
@@ -322,7 +325,6 @@ http://nuttx.org/Documentation/NXGraphicsSubsystem.html
 
 #### Projects
 
-https://balau82.wordpress.com/2015/12/07/dhcp-client-on-stm32-nucleo-and-w5100/
 http://mikrocontroller.bplaced.net/wordpress/?page_id=2434
 https://www.mikrocontroller.net/topic/296181
 
@@ -334,12 +336,6 @@ http://acme.com/software/thttpd/
 
 nRF24L01
 * nuttx 
-
-W5100
-* STM32 bare metal https://www.mikrocontroller.net/topic/363765 <br/>
-  https://github.com/cnoviello/stm32-w5100
-* Riot http://riot-os.org/api/group__drivers__w5100.html
-
 
 ### Full OS
 

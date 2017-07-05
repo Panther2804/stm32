@@ -71,4 +71,4 @@ Classes
 
 * https://community.st.com/thread/36017-mutual-exclusion-for-hal-using-freertos
 * http://vjordan.info/log/fpga/stm32f4-generating-parallel-signals-with-the-fsmc.html
-
+* https://docs.mbed.com/docs/mbed-os-handbook/en/latest/advanced/flash/
